@@ -11,7 +11,7 @@ import TheActivityTimeline from '@/components/dashboard/TheActivityTimeline.vue'
   <v-row>
     <!---SalesOverview--->
     <v-col cols="12" sm="12" lg="8">
-      <TheSalesOverview />
+      <TheSalesOverview /> 
     </v-col>
     <!---Blog Card--->
     <v-col cols="12" sm="12" lg="4">

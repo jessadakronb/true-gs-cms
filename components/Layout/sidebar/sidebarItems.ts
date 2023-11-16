@@ -4,7 +4,7 @@ import {
   CircleDotIcon,
   BoxMultiple1Icon,
   AdjustmentsHorizontalIcon,
-  LayoutDashboardIcon
+  LayoutDashboardIcon,
 
 } from 'vue-tabler-icons';
 
@@ -30,6 +30,11 @@ const sidebarItem: menu[] = [
     title: "Dashboard",
     icon: LayoutDashboardIcon,
     to: "/",
+  },
+  {
+    title: "User Overview",
+    icon: LayoutDashboardIcon,
+    to: "/user",
   },
   { header: 'Utilities' },
   {
