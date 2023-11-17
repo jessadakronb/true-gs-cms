@@ -62,12 +62,11 @@ const desserts = ref([
                         </tr>
                     </tbody>
                 </v-table>
-
             </UiChildCard>
         </v-col>
  
         <v-col cols="12" sm="12">
-            <!-- <UiChildCard title="Dark Table"> -->
+            <UiChildCard title="Dark Table">
                 <v-table theme="dark">
                     <thead>
                         <tr>
@@ -82,7 +81,7 @@ const desserts = ref([
                         </tr>
                     </tbody>
                 </v-table>
-            <!-- </UiChildCard> -->
+            </UiChildCard>
         </v-col>
 
         <v-col cols="12" sm="12">

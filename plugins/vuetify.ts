@@ -25,6 +25,9 @@ export default defineNuxtPlugin((nuxtApp) => {
       VCard: {
         rounded: "md"
       },
+      VBtn: {
+        color: 'secondary'
+      },
       VTextField: {
         variant: "outlined",
         density: "comfortable",

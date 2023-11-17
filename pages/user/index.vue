@@ -15,6 +15,7 @@
         </div>
       </div>
       <br />
+      <hr/>
       <v-col cols="12" sm="12">
           <v-table>
             <thead>

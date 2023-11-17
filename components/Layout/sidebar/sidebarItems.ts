@@ -5,7 +5,15 @@ import {
   BoxMultiple1Icon,
   AdjustmentsHorizontalIcon,
   LayoutDashboardIcon,
-
+  UserIcon,
+  UserMinusIcon,
+  UsersIcon,
+  MedicalCrossIcon,
+  FolderIcon,
+  FoldersIcon,
+  FoldUpIcon,
+  FolderPlusIcon,
+  BrandGoogleDriveIcon,
 } from 'vue-tabler-icons';
 
 export interface menu {
@@ -22,6 +30,8 @@ export interface menu {
   disabled?: boolean;
   type?: string;
   subCaption?: string;
+  expanded?: boolean;
+
 }
 
 const sidebarItem: menu[] = [
@@ -33,8 +43,25 @@ const sidebarItem: menu[] = [
   },
   {
     title: "User Overview",
-    icon: LayoutDashboardIcon,
+    icon: UsersIcon,
     to: "/user",
+    children: [
+      {
+        title: "Profile",
+        to: "/user/profile",
+      },
+      {
+        title: "Settings",
+        to: "/user/settings",
+      },
+      // Add more sub-menu items as needed
+    ],
+    expanded: false, // Initialize the expanded property
+  },
+  {
+    title: "Media Center",
+    icon: BrandGoogleDriveIcon,
+    to: "/media-center",
   },
   { header: 'Utilities' },
   {
@@ -60,11 +87,8 @@ const sidebarItem: menu[] = [
   {
     title: "Tables",
     icon: BorderAllIcon,
-    to: "/ui-components/tabels",
+    to: "/ui-components/tables",
   },
-
- 
-
 ];
 
 export default sidebarItem;
