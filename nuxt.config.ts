@@ -8,6 +8,13 @@ export default defineNuxtConfig({
     head: {
       title:
         "TrueGS CMS",
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/png',
+          href: '/favicon.ico', // Adjust the path if your favicon is in a different location
+        },
+      ],
     },
   },
   build: {
