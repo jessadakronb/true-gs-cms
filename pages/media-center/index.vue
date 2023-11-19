@@ -19,7 +19,9 @@
       </div>
       <br />
       <div class="d-flex align-center">
-        <v-text-field v-model="search" label="Search" class="mr-3" hide-details></v-text-field>
+        <v-text-field v-model="search" class="mr-3" rounded hide-details>
+          <searchIcon></searchIcon>
+        </v-text-field>
         <!-- First Dropdown -->
         <v-select v-model="selectedOption1" class="mr-3" :items="dropdownOptions1" label="Dropdown 1"
           hide-details></v-select>
@@ -31,10 +33,22 @@
       <div class="media-center-gallery">
         <v-row>
           <v-col v-for="(item, index) in galleryItems" :key="index" cols="12" sm="6" md="4" lg="3">
-            <!-- Your gallery item content here -->
-            <v-img :src="item"></v-img>
+            <v-card rounded class="mx-auto" max-width="400">
+              <v-card-text>
+                <v-card-title class="d-flex justify-space-between align-center">
+                  <div class="text-h6">File Name</div>
+                  <div>
+                    <input type="checkbox">
+                  </div>
+                </v-card-title>
+                <v-img :lazy-src="item" :src="item" :style="{ borderRadius: '20px' }"></v-img>
+              </v-card-text>
+            </v-card>
           </v-col>
         </v-row>
+      </div>
+      <div class="d-flex justify-center align-center mt-3">
+        <v-btn>Load more</v-btn>
       </div>
     </v-card-text>
   </v-card>
@@ -50,14 +64,12 @@ const dropdownOptions1 = ref(['Option 1', 'Option 2', 'Option 3']);
 const dropdownOptions2 = ref(['Option A', 'Option B', 'Option C']);
 
 const galleryItems = ref([
-  'https://via.placeholder.com/300x200',
-  'https://via.placeholder.com/300x200',
-  'https://via.placeholder.com/300x200',
-  'https://via.placeholder.com/300x200',
-  'https://via.placeholder.com/300x200',
-  'https://via.placeholder.com/300x200',
-
-  // Add more image URLs as needed
+  'https://picsum.photos/200',
+  'https://picsum.photos/200',
+  'https://picsum.photos/200',
+  'https://picsum.photos/200',
+  'https://picsum.photos/200',
+  'https://picsum.photos/200',
 ]);
 
 </script>

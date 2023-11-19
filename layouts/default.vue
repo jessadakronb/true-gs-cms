@@ -22,7 +22,7 @@ onMounted(() => {
                     <div class="d-sm-flex d-none">
                         <LayoutLogo/>
                     </div>
-                    <div class="pr-2 pt-2 d-sm-none d-flex">
+                    <div class="pr-2 pt-5 d-sm-none d-flex">
                         <LayoutLogoIcon />
                     </div>
                 </div>
